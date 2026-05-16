@@ -22,6 +22,25 @@ void km_ke_cm(double km){
 void km_ke_mm(double km){
     cout << km << " KM = " << km * 1000000 << " MM" << endl;
 }
+void mm_ke_km(double mm){
+    cout << mm << " MM = " << mm / 1000000 << " KM" << endl;
+}
+void mm_ke_hm(double mm){
+    cout << mm << " MM = " << mm / 100000 << " HM" << endl;
+}
+void mm_ke_dam(double mm){
+    cout << mm << " MM = " << mm / 10000 << " DAM" << endl;
+}
+void mm_ke_m(double mm){
+    cout << mm << " MM = " << mm / 1000 << " M" << endl;
+}
+void mm_ke_dm(double mm){
+    cout << mm << " MM = " << mm / 100 << " DM" << endl;
+}
+void mm_ke_cm(double mm){
+    cout << mm << " MM = " << mm / 10 << " CM" << endl;
+}
+
 
 // Fungsi
 double f_km_hm(double km){
@@ -41,4 +60,25 @@ double f_km_cm(double km){
 }
 double f_km_mm(double km){
     return km * 1000000;
+}
+double f_mm_km(double mm){
+    return mm / 1000000;
+}
+double f_mm_hm(double mm){
+    return mm / 100000;
+}
+double f_mm_dam(double mm){
+    return mm / 10000;
+}
+double f_mm_m(double mm){
+    return mm / 1000;
+}
+double f_mm_dm(double mm){
+    return mm / 100;
+}
+double f_mm_cm(double mm){
+    return mm / 10;
+}
+double f_mm_mm(double mm){
+    return mm;
 }
