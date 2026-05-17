@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/kpher/OneDrive/Documents/tubes_strukdat",
-      "program": "c:/Users/kpher/OneDrive/Documents/tubes_strukdat/build/Debug/outDebug",
+      "cwd": "c:/Users/Lenovo/tubes-strukdat-kel-6",
+      "program": "c:/Users/Lenovo/tubes-strukdat-kel-6/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
