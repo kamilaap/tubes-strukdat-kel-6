@@ -60,8 +60,6 @@ int main()
     {
         system("cls");
         tampilJudul();
-
-        // ── STEP 1: jumlah nilai ────────────────────────────────
         cout << "Masukkan jumlah nilai yang ingin dikonversi: ";
         cin >> jumlahNilai;
 
@@ -72,8 +70,6 @@ int main()
             system("pause");
             continue;
         }
-
-        // ── STEP 2: isi nilai ───────────────────────────────────
         double nilaiList[MAX_NILAI];
         cout << endl;
         cout << "Masukkan " << jumlahNilai << " nilai:" << endl;
@@ -82,8 +78,6 @@ int main()
             cout << "  Nilai ke-" << i + 1 << " : ";
             cin >> nilaiList[i];
         }
-
-        // ── STEP 3: pilih satuan ────────────────────────────────
         cout << endl;
         tampilDaftarSatuan();
 
@@ -95,7 +89,6 @@ int main()
             system("pause");
             continue;
         }
-
         cout << "Pilih satuan tujuan : ";
         cin >> tujuan;
         if (tujuan < 1 || tujuan > JUMLAH_SATUAN)
@@ -104,8 +97,6 @@ int main()
             system("pause");
             continue;
         }
-
-        // ── STEP 4: konversi + tampilkan hasil ──────────────────
         cout << "========================================" << endl;
         cout << "Hasil Konversi ("
              << getNamaSatuan(asal) << " -> "
@@ -121,9 +112,7 @@ int main()
             cetakAngka(hasil);
             cout << " " << getNamaSatuan(tujuan) << endl;
         }
-
         cout << "========================================" << endl;
-
         cout << "Hitung ulang? (y/n) : ";
         cin >> ulang;
 
@@ -134,6 +123,5 @@ int main()
     cout << "   Terima kasih telah menggunakan       " << endl;
     cout << "      program konversi satuan :)        " << endl;
     cout << "========================================" << endl;
-
     return 0;
 }
