@@ -3,6 +3,22 @@
 #include "konversi.h"
 using namespace std;
 
+const int JUMLAH_SATUAN = 7;
+
+const string namaSatuan[JUMLAH_SATUAN] = {
+    "KM", "HM", "DAM", "M", "DM", "CM", "MM"
+};
+
+const string daftarSatuan[JUMLAH_SATUAN] = {
+    "Kilometer  (KM)",
+    "Hektometer (HM)",
+    "Dekameter  (DAM)",
+    "Meter      (M)",
+    "Desimeter  (DM)",
+    "Centimeter (CM)",
+    "Milimeter  (MM)"
+};
+
 void tampilJudul()
 {
     cout << "========================================" << endl;
@@ -13,36 +29,17 @@ void tampilJudul()
 void tampilDaftarSatuan()
 {
     cout << "Daftar Satuan:" << endl;
-    cout << "1. Kilometer  (KM)" << endl;
-    cout << "2. Hektometer (HM)" << endl;
-    cout << "3. Dekameter  (DAM)" << endl;
-    cout << "4. Meter      (M)" << endl;
-    cout << "5. Desimeter  (DM)" << endl;
-    cout << "6. Centimeter (CM)" << endl;
-    cout << "7. Milimeter  (MM)" << endl;
+    for (int i = 0; i < JUMLAH_SATUAN; i++)
+    {
+        cout << i + 1 << ". " << daftarSatuan[i] << endl;
+    }
 }
 
 string getNamaSatuan(int satuan)
 {
-    switch (satuan)
-    {
-    case 1:
-        return "KM";
-    case 2:
-        return "HM";
-    case 3:
-        return "DAM";
-    case 4:
-        return "M";
-    case 5:
-        return "DM";
-    case 6:
-        return "CM";
-    case 7:
-        return "MM";
-    default:
-        return "?";
-    }
+    if (satuan >= 1 && satuan <= JUMLAH_SATUAN)
+        return namaSatuan[satuan - 1];
+    return "?";
 }
 
 int main()
@@ -54,16 +51,15 @@ int main()
     do
     {
         system("cls");
-
         tampilJudul();
         tampilDaftarSatuan();
 
         cout << "Pilih satuan asal   : ";
         cin >> asal;
 
-        if (asal < 1 || asal > 7)
+        if (asal < 1 || asal > JUMLAH_SATUAN)
         {
-            cout << "ERROR: Pilihan hanya 1 - 7!" << endl;
+            cout << "ERROR: Pilihan hanya 1 - " << JUMLAH_SATUAN << "!" << endl;
             system("pause");
             continue;
         }
@@ -71,9 +67,9 @@ int main()
         cout << "Pilih satuan tujuan : ";
         cin >> tujuan;
 
-        if (tujuan < 1 || tujuan > 7)
+        if (tujuan < 1 || tujuan > JUMLAH_SATUAN)
         {
-            cout << "ERROR: Pilihan hanya 1 - 7!" << endl;
+            cout << "ERROR: Pilihan hanya 1 - " << JUMLAH_SATUAN << "!" << endl;
             system("pause");
             continue;
         }
